@@ -15,7 +15,7 @@ p {
   margin: 0 0 28px;
 }
 
-p:first-of-type {
+.email p:first-of-type {
   font-size: 26px;
   line-height: 36px;
   margin: 0 0 28px;
