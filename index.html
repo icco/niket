@@ -26,6 +26,16 @@
       .marketing p + h4 {
         margin-top: 28px;
       }
+
+      ul#toc {
+        list-style: none;
+        margin: 0;
+      }
+
+      ul#toc li {
+        display: inline-block;
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
@@ -40,6 +50,13 @@
           -->
         </ul>
         <h3 class="muted">Letters from Niket Desai</h3>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid">
+        <ul id="toc">
+        </ul>
       </div>
 
       <hr>
@@ -134,7 +151,7 @@
           </ul>
           </p>
 
-          <h3>Breakdown of diagnosis:</h3>
+          <h5>Breakdown of diagnosis:</h5>
 
           <p>
           Most Testicular cancer you hear of tends to be "seminoma" which is a specific and singular type of cancer that is highly affected by radiation and chemo-therapy. This is why the survival rates are so good (in the 1970s, mortality rates exceed 90% if you had TC!). Unfortuantely, I am dealing with a non-seminoan type of cancer that is also highly aggressive and completely resistant to radiation therapy and resistant to chemo as well. Generally, Embryonal values over 50% are considered bad, I got an 88%. (Where the hell were the B+'s when I needed them in school?)
@@ -156,27 +173,27 @@
           Lymph nodes show that they are normal. This however can change as we know the cancer has been lymphovascular invasion (potentially the cancer is marching on).
           </p>
 
-          <h3>Okay, so what the hell does all this mean?</h3>
+          <h5>Okay, so what the hell does all this mean?</h5>
           <p>
           The ideal scenario would have been that we removed all of the cancer. Oh well. I am lucky though, and do have three options moving forward in this fight. I'll explain each in a little bit of detail:
           </p>
 
-          <h4>Option 1: Surveillance</h4>
+          <h6>Option 1: Surveillance</h6>
           <p>
           I have roughly a 50% chance that I won't see the cancer spread based on what we know currently (and can hopefully confirm with additional blood work). Surveillance means I'd just keep an eye on it for the rest of my life and hope it doesn't do something crazy and leave this all to a coin flip.
           </p>
 
-          <h4>Option 2: RPLND Surgery &amp; Chemotherapy</h4>
+          <h6>Option 2: RPLND Surgery &amp; Chemotherapy</h6>
           <p>
           To address the teratoma (the cancer that isn't affected by radiation and chemo) I could choose to do a RPLND surgery followed by chemotherapy. The surgery is quite complicated as to get to my lymph nodes requires cutting open my chest and removing most major organs to gain access. There are some complications with such an intense surgery and recovery time is large. 1/5 people also become sterile… I would then follow up with chemotherapy to destroy the remaining cancerous cells. This would render me likely cured. Though, I'd have some pretty wicked scars & side effects.
           </p>
 
-          <h4>Option 3: Heavy Chemotherapy</h4>
+          <h6>Option 3: Heavy Chemotherapy</h6>
           <p>
           The third option is heavy chemotherapy without the surgery. I'd all be eradicate the cancer but leave a backdoor for the teratoma to potentially cause a recurrence leading me to more treatment down the line. The amount of chemotherapy would also be as much as one could take. They'd really nuke me to kill this thing so I am still learning about what that means for my life and health.
           </p>
 
-          <h3>In Summary</h3>
+          <h5>In Summary</h5>
           Basically, on a scale of 1-10, where 1 is bad and 10 was good I probably am sitting in the 3-6 range of how this could have landed. I hope to take this Thanksgiving to choose what path to follow and be extra-thankful because I am certain that I wouldn't be able to do this without each of you.
           </p>
 
@@ -479,5 +496,12 @@
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      var counter = 0;
+      $('.email > h4').each(function (id, el) {
+        el.id = counter++;
+        $('#toc').append('<li><a href="#' + el.id + '">' + el.innerText + '</a></li>'); 
+      });
+    </script>
   </body>
 </html>
