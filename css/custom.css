@@ -1,29 +1,73 @@
-h1 {
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+ul#toc {
+  list-style: none;
+  margin: 0;
+}
+
+ul#toc li {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* Baldwin Style */
+
+body {
+  background:#EDEDED;
+}
+.container-narrow {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  padding:20px;
+  margin:40px auto;
+}
+
+h3.muted {
   color: #333333;
-  font-family: 'Bitter', serif;
+  font-family: 'Lora', Georgia, Arial, serif;
   font-size: 50px;
   font-weight: normal;
   line-height: 54px;
-  margin: 0 0 54px;
+  text-align: center;
+}
+
+h3.muted span {
+  display:block;
+  color:#999999;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 p {
   color: #333333;
-  font-family: Georgia, serif;
+  font-family: 'Lora', Georgia, Arial, serif;
   font-size: 18px;
   line-height: 28px;
   margin: 0 0 28px;
 }
 
-.email p:first-of-type {
-  font-size: 26px;
-  line-height: 36px;
-  margin: 0 0 28px;
-}
-
 a {
   color: #c73036;
-  font-family: Georgia, serif;
   text-decoration: underline;
 }
 
@@ -49,12 +93,25 @@ a:hover {
 }
 
 h4 {
-  color:#8d8d8d;
+  color:#999999;
+  text-align: right;
+  font-weight: normal;
+  font-family: 'Lora', Georgia, Arial, serif;
+  font-size:14px;
 }
 
 .email {
-  border-bottom:1px solid #d4d4d4;
-  margin-bottom:40px;
+  border: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #EEE;
+  padding:40px 0;
+}
+
+img {
+  width:80%;
+  text-align: center;
+  border:none !important;
+  padding:none !important;
 }
 
 body {
