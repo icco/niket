@@ -99,3 +99,8 @@ ul#toc li {
   color: #999;
   margin: 20px;
 }
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+  text-decoration: none;
+}
