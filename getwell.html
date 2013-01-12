@@ -41,8 +41,10 @@
         -->
 
         <div class="email newyear">
-          <p>
+          <p class="clearfix">
             <h3>Happy New Year Niket, cheers to you.</h3>
+          </p>
+          <p class="masonry">
             <a href="img/newyears/AdamGainford.jpg" class="view" title="From Adam Gainford" rel="newyear"><img class="thumbnail" src="img/newyears/AdamGainford.jpg" /></a>
             <a href="img/newyears/AinsandBorksi.jpg" class="view" title="From Ainsley & Borski" rel="newyear"><img class="thumbnail" src="img/newyears/AinsandBorksi.jpg" alt="From Ainsley & Borski" /></a>
             <a href="img/newyears/Bethany1.jpg" class="view" title="From Bethany" rel="newyear"><img class="thumbnail" src="img/newyears/Bethany1.jpg" alt="From Bethany" /></a>
@@ -366,15 +368,26 @@
     </div> <!-- /container -->
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script>
+
+      $(function(){
+        var container = $('.masonry');
+        container.imagesLoaded(function() {
+          container.masonry({
+            itemSelector : '.view',
+            columnWidth: 230,
+          });
+        });
+      });
+
       var counter = 0;
       $('.email > div.from').each(function (id, el) {
         el.id = counter++;
         $('#toc').append('<li><a href="#' + el.id + '">' + el.innerText + '</a></li>');
       });
     </script>
-    <script type="text/javascript">
+    <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36864642-2']);
       _gaq.push(['_setDomainName', 'lettersfromniket.com']);
@@ -387,6 +400,7 @@
       })();
     </script>
 
-    <script src="js/view.js?auto"></script>
+    <script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
+    <script src="/js/view.js?auto"></script>
   </body>
 </html>
