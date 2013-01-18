@@ -1072,7 +1072,12 @@
       var counter = 0;
       $('.email > h4').each(function (id, el) {
         el.id = counter++;
-        $('#toc').append('<li><a href="#' + el.id + '">' + el.innerText + '</a></li>');
+        $('#toc').append('<li><a href="#' + el.id + '" class="scroll">' + el.innerText + '</a></li>');
+      });
+      
+      $(".scroll").click(function(event){  	
+        event.preventDefault();
+  		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
       });
     </script>
     <script type="text/javascript">
