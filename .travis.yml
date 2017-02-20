@@ -1,0 +1,11 @@
+language: node_js
+script: true
+deploy:
+  provider: onesie
+  edge:
+    source: icco/dpl
+    branch: onesie
+  key: 1193dc06-d1be-461d-9025-97c4cc50319b
+  domain: lettersfromniket.com
+  secret:
+    secure: CTKaj7HSLvZNIt9SzaRZf35/4gjA6NovI9xR5UhLs5tQaVcVDThPLAW+1E4GOILFGyHlE6ugoQo/x9/dvZPeVGIn76QMXAQiRlVdftmO/uFt84i0aKXzSJ1BltQ1Yt9pub+nQjDgP2Coaqti1qog3cOyqSjesJ6S2rmZJO8gv4c=
